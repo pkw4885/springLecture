@@ -3,16 +3,16 @@ package keonwoo.hellospring.service;
 import keonwoo.hellospring.domain.Member;
 import keonwoo.hellospring.repository.MemberRepository;
 import keonwoo.hellospring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+
 public class MemberService {
-
     //서비스 딴에서는 좀 더 비즈니스 처리를 하는 게 원칙이기 때문에, 네이밍을 그에 맞게 지음
-
     // 이건 멤버 리포지토리를 만들때마다 다른 리포지토리를 쓰게 됨 -> private final MemberRepository memberRepository = new MemoryMemberRepository() ;
-
     private final MemberRepository memberRepository;
 
     // 외부에서 넣어주도록 함
